@@ -1,0 +1,12 @@
+quarkus:
+  flyway:
+    migrate-at-start: true
+    baseline-on-migrate: true
+  datasource:
+    db-kind: 'other'
+    jdbc:
+      url: 'jdbc:postgresql:///main'
+      driver: 'org.postgresql.Driver'
+      additional-jdbc-properties:
+        cloudSqlInstance: 'main:europe-central2:main'
+        socketFactory: 'com.google.cloud.sql.postgres.SocketFactory'
